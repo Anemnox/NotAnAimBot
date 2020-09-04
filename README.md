@@ -1,0 +1,2 @@
+# NotAnAimBot
+It's not
