@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Update_at_9_4_2020_9_39_PM_[Default_Changelist]" date="1599280786986" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_4_2020_9_39_PM_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 9/4/2020 9:39 PM [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/AimAssist/main/engine/AimManager.class" />
+    <option name="AFTER_PATH" value="out/production/AimAssist/main/engine/AimManager.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_4_2020_9_39_PM_[Default_Changelist]/AimManager.class" />
+  </binary>
+</changelist>

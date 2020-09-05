@@ -1,0 +1,174 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_10\" default=\"false\" project-jdk-name=\"14\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision a9036c006fa1f687e370bac130f57d49b740bcbf)
++++ .idea/misc.xml	(date 1599273628115)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="14" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="openjdk-14" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/ScreenCap/ImageProcess.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/ScreenCap/ImageProcess.java	(date 1599280670910)
++++ src/ScreenCap/ImageProcess.java	(date 1599280670910)
+@@ -0,0 +1,69 @@
++package ScreenCap;
++
++import org.opencv.core.*;
++import org.opencv.imgcodecs.Imgcodecs;
++import org.opencv.imgproc.Imgproc;
++import org.opencv.highgui.HighGui;
++
++import javax.swing.*;
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Random;
++
++public class ImageProcess{
++    private Random rng = new Random(12345);
++
++    // TODO probably better to use a pointer to the image
++    public void openPicAndProcesses(String filename) {
++        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
++        Imgcodecs imageCodecs = new Imgcodecs();
++        Mat matrix = imageCodecs.imread(filename);
++        System.out.println("image opened");
++
++        Mat blurredImage = new Mat();
++        Mat hsvImage = new Mat();
++        Mat mask_red1 = new Mat();
++        Mat mask_red2 = new Mat();
++
++        Mat morphOutput = new Mat();
++
++        Imgproc.blur(matrix, blurredImage, new Size(7,7));
++        Imgproc.cvtColor(blurredImage, hsvImage, Imgproc.COLOR_BGR2HSV);
++        HighGui.imshow("blurredImage", blurredImage);
++        HighGui.imshow("hsvImage", hsvImage);
++
++        Scalar redLower = new Scalar(0,255*0.33,255*0.5);
++        Scalar redUpper = new Scalar(10,255,255*0.7);
++        Core.inRange(hsvImage, redLower, redUpper ,mask_red1);
++
++        redLower = new Scalar(170,120,70);
++        redUpper = new Scalar(180,255,255);
++        Core.inRange(hsvImage, redLower, redUpper ,mask_red2);
++
++        Mat finalMask = new Mat();
++        Core.add(mask_red1, mask_red2, finalMask);
++        HighGui.imshow("mask1", mask_red1);
++        HighGui.imshow("mask2", mask_red2);
++        HighGui.imshow("mask1+2", finalMask);
++
++        int threshold = 100;
++        Mat cannyOutput = new Mat();
++        Imgproc.Canny(finalMask, cannyOutput, threshold, threshold * 2);
++        List<MatOfPoint> contours = new ArrayList<>();
++        Mat hierarchy = new Mat();
++        Imgproc.findContours(cannyOutput, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
++        Mat drawing = Mat.zeros(cannyOutput.size(), CvType.CV_8UC3);
++        for (int i = 0; i < contours.size(); i++) {
++            Scalar color = new Scalar(rng.nextInt(256), rng.nextInt(256), rng.nextInt(256));
++            Imgproc.drawContours(drawing, contours, i, color, 2, Core.FILLED, hierarchy, 0,
++                    new Point());
++        }
++        HighGui.imshow("drawing+2", drawing);
++
++        //HighGui.toBufferedImage(drawing);
++        //frame.repaint();
++        HighGui.waitKey();
++    }
++
++
++}
+Index: .idea/libraries/opencv_440.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\r\n  <library name=\"opencv-440\">\r\n    <CLASSES>\r\n      <root url=\"jar:///usr/local/Cellar/opencv/4.4.0_1/share/java/opencv4/opencv-440.jar!/\" />\r\n    </CLASSES>\r\n    <JAVADOC />\r\n    <NATIVE>\r\n      <root url=\"file:///usr/local/Cellar/opencv/4.4.0_1/share/java/opencv4\" />\r\n    </NATIVE>\r\n    <SOURCES>\r\n      <root url=\"jar:///usr/local/Cellar/opencv/4.4.0_1/share/java/opencv4/opencv-440.jar!/\" />\r\n    </SOURCES>\r\n  </library>\r\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/opencv_440.xml	(revision a9036c006fa1f687e370bac130f57d49b740bcbf)
++++ .idea/libraries/opencv_440.xml	(date 1599273628246)
+@@ -1,14 +1,11 @@
+ <component name="libraryTable">
+   <library name="opencv-440">
+     <CLASSES>
+-      <root url="jar:///usr/local/Cellar/opencv/4.4.0_1/share/java/opencv4/opencv-440.jar!/" />
++      <root url="jar://$PROJECT_DIR$/../../openCV4.4/opencv/build/java/opencv-440.jar!/" />
+     </CLASSES>
+     <JAVADOC />
+-    <NATIVE>
+-      <root url="file:///usr/local/Cellar/opencv/4.4.0_1/share/java/opencv4" />
+-    </NATIVE>
+     <SOURCES>
+-      <root url="jar:///usr/local/Cellar/opencv/4.4.0_1/share/java/opencv4/opencv-440.jar!/" />
++      <root url="jar://$PROJECT_DIR$/../../openCV4.4/opencv/build/java/opencv-440.jar!/" />
+     </SOURCES>
+   </library>
+ </component>
+\ No newline at end of file
+Index: src/ScreenCap/ImageProcessTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/ScreenCap/ImageProcessTest.java	(date 1599275955686)
++++ src/ScreenCap/ImageProcessTest.java	(date 1599275955686)
+@@ -0,0 +1,8 @@
++package ScreenCap;
++
++public class ImageProcessTest{
++    public static void main(String[]args) {
++        ImageProcess ip = new ImageProcess();
++        ip.openPicAndProcesses("testpic.jpg");
++    }
++}
+Index: AimAssist.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"CheckStyle-IDEA-Module\">\r\n    <option name=\"configuration\">\r\n      <map />\r\n    </option>\r\n  </component>\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"opencv-440\" level=\"project\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- AimAssist.iml	(revision a9036c006fa1f687e370bac130f57d49b740bcbf)
++++ AimAssist.iml	(date 1599273627896)
+@@ -13,5 +13,6 @@
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" name="opencv-440" level="project" />
++    <orderEntry type="library" name="x64" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/libraries/x64.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/x64.xml	(date 1599273628337)
++++ .idea/libraries/x64.xml	(date 1599273628337)
+@@ -0,0 +1,10 @@
++<component name="libraryTable">
++  <library name="x64">
++    <CLASSES />
++    <JAVADOC />
++    <NATIVE>
++      <root url="file://$PROJECT_DIR$/../../openCV4.4/opencv/build/java/x64" />
++    </NATIVE>
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
