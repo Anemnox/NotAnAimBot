@@ -1,9 +1,12 @@
+/**
+ * Main Application For the AimAssist: NotAnAimBot project.
+ */
 package main;
 
-import main.engine.AimManager;
+import main.engine.AimEngine;
 
 public class MainApp {
     public static void main(String[] args) {
-        AimManager manager = new AimManager();
+        AimBot bot = new AimBot();
     }
 }
