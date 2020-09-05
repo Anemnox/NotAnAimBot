@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="606993ae-3d81-4301-939e-5980f7b5d8e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScreenCap/FullScreenCaptureExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AimAssist.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AimAssist.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +26,32 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.FullScreenCaptureExample">
+    <configuration name="FullScreenCaptureExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ScreenCap.FullScreenCaptureExample" />
+      <module name="AimAssist" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ScreenCap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestMouseMover" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.TestMouseMover" />
       <module name="AimAssist" />
@@ -50,6 +67,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FullScreenCaptureExample" />
         <item itemvalue="Application.TestMouseMover" />
       </list>
     </recent_temporary>
@@ -72,29 +90,85 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="218" y="203" width="813" height="666" key="#Project_Structure/0.23.1680.1027@0.23.1680.1027" timestamp="1599265664409" />
-    <state width="1193" height="237" key="GridCell.Tab.0.bottom" timestamp="1599266367433">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1332" height="249" key="GridCell.Tab.0.bottom" timestamp="1599269855652">
+      <screen x="2560" y="353" width="1920" height="1040" />
     </state>
+    <state width="1332" height="249" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269816040" />
+    <state width="1332" height="249" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.353.1920.1040@2560.353.1920.1040" timestamp="1599269855652" />
     <state width="1193" height="237" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1599266367433" />
-    <state width="1193" height="237" key="GridCell.Tab.0.center" timestamp="1599266367428">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1332" height="249" key="GridCell.Tab.0.center" timestamp="1599269855652">
+      <screen x="2560" y="353" width="1920" height="1040" />
     </state>
+    <state width="1332" height="249" key="GridCell.Tab.0.center/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269816040" />
+    <state width="1332" height="249" key="GridCell.Tab.0.center/0.0.2560.1400/2560.353.1920.1040@2560.353.1920.1040" timestamp="1599269855652" />
     <state width="1193" height="237" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1599266367428" />
-    <state width="1193" height="237" key="GridCell.Tab.0.left" timestamp="1599266367427">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1332" height="249" key="GridCell.Tab.0.left" timestamp="1599269855652">
+      <screen x="2560" y="353" width="1920" height="1040" />
     </state>
+    <state width="1332" height="249" key="GridCell.Tab.0.left/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269816040" />
+    <state width="1332" height="249" key="GridCell.Tab.0.left/0.0.2560.1400/2560.353.1920.1040@2560.353.1920.1040" timestamp="1599269855652" />
     <state width="1193" height="237" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1599266367427" />
-    <state width="1193" height="237" key="GridCell.Tab.0.right" timestamp="1599266367431">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1332" height="249" key="GridCell.Tab.0.right" timestamp="1599269855652">
+      <screen x="2560" y="353" width="1920" height="1040" />
     </state>
+    <state width="1332" height="249" key="GridCell.Tab.0.right/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269816040" />
+    <state width="1332" height="249" key="GridCell.Tab.0.right/0.0.2560.1400/2560.353.1920.1040@2560.353.1920.1040" timestamp="1599269855652" />
     <state width="1193" height="237" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1599266367431" />
-    <state x="424" y="89" key="SettingsEditor" timestamp="1599264752526">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1332" height="308" key="GridCell.Tab.1.bottom" timestamp="1599269556280">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state width="1332" height="308" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556280" />
+    <state width="1332" height="308" key="GridCell.Tab.1.center" timestamp="1599269556280">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1332" height="308" key="GridCell.Tab.1.center/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556280" />
+    <state width="1332" height="308" key="GridCell.Tab.1.left" timestamp="1599269556280">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1332" height="308" key="GridCell.Tab.1.left/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556280" />
+    <state width="1332" height="308" key="GridCell.Tab.1.right" timestamp="1599269556280">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1332" height="308" key="GridCell.Tab.1.right/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556280" />
+    <state width="1332" height="308" key="GridCell.Tab.2.bottom" timestamp="1599269556281">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1332" height="308" key="GridCell.Tab.2.bottom/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556281" />
+    <state width="1332" height="308" key="GridCell.Tab.2.center" timestamp="1599269556281">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1332" height="308" key="GridCell.Tab.2.center/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556281" />
+    <state width="1332" height="308" key="GridCell.Tab.2.left" timestamp="1599269556280">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1332" height="308" key="GridCell.Tab.2.left/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556280" />
+    <state width="1332" height="308" key="GridCell.Tab.2.right" timestamp="1599269556281">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1332" height="308" key="GridCell.Tab.2.right/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599269556281" />
+    <state x="646" y="90" key="SettingsEditor" timestamp="1599267332521">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="646" y="90" key="SettingsEditor/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599267332521" />
     <state x="424" y="89" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1599264752526" />
     <state x="417" y="331" key="com.intellij.ide.util.TipDialog" timestamp="1599266177695">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="417" y="331" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1599266177695" />
+    <state x="896" y="416" width="672" height="678" key="search.everywhere.popup" timestamp="1599268442735">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="896" y="416" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.353.1920.1040@0.0.2560.1400" timestamp="1599268442735" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ScreenCap/FullScreenCaptureExample.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
