@@ -1,2 +1,2 @@
 # NotAnAimBot
-It's not
+A small project to test image recognition in a fps game.
